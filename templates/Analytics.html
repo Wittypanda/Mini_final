@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link  href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet" type="text/css">
+        <link  href="/static/style1.css" rel="stylesheet">
+        {% if title %}
+        <title>Covid-19 Data Visualisation-{{title}}</title>
+    
+        {% else %}
+        <title>Covid-19 Data Visualisation</title>
+        {% endif %}
+    </head>
+    
+<body>
+      <header class="header">
+        <div class="container">
+           <div class="row align-items-center justify-content-between">
+              <div class="logo">
+                 <a href="#">Covid-19</a>
+              </div>
+              <button type="button" class="nav-toggler">
+                 <span></span>
+              </button>
+              <nav class="nav">
+                 <ul>
+                    <li><a href="#" class="active">home</a></li>
+                    <li><a href="/about">about</a></li>
+                    <li><a href="/Analytics">Analytics</a></li>
+                    <li><a href="#">contact</a></li>
+                    
+                 </ul>
+              </nav>
+           </div>
+        </div>
+     </header>
+
+     <figure class="figure">
+        <center><img src="static/logarithmic.jpeg" class="figure-img img-fluid rounded" alt="..."></center>
+        <figcaption class="figure-caption text-end">It allows an analyst to understand the data on a scale factor decided by the Logarthimic function. A logarithmic scale (or log scale) is a way of displaying numerical data over a very wide range of values in a compact way—typically the largest numbers in the data are hundreds or even thousands of times larger than the smallest numbers. </figcaption>
+      </figure>
+
+      <figure class="figure">
+        <center><img src="static/funnel.jpeg" class="figure-img img-fluid rounded" alt="..."></center>
+        <figcaption class="figure-caption text-end">A funnel is a type of chart that shows progress through a series of linear and interconnected stages in which the data values typically decrease. In our project the funnelchart helps the analyst to understand the consequenses of the connceted events. Thus providing a better understanding of the connected data.</figcaption>
+      </figure>
+
+      <figure class="figure">
+       <center> <img src="static/time series.jpeg" class="figure-img img-fluid rounded" alt="..."></center>
+        <figcaption class="figure-caption text-end">Time series analysis is a specific way of analyzing a sequence of data points collected over an interval of time. In time series analysis, analysts record data points at consistent intervals over a set period of time rather than just recording the data points intermittently or randomly.In our analysis we found that the 1st wave was for a longer time span with respect to 2nd wave, meanwhile the 2nd wave was highly damaging to the collective.</figcaption>
+      </figure>
+</body>

@@ -59,44 +59,6 @@
 
 </div> -->
 
-<div class="container">
-    <!-- <div class="row"> -->
-    <div>
-
-        <div class="card-body">
-            <div id="chart0"></div>
-
-            <h5 class="card-title">Card title</h5>
-            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                        content.</p> -->
-            <!-- <a href="#" class="btn btn-info">Go somewhere</a> -->
-        </div>
-    </div>
-</div>
-<div>
-
-    <div class="card-body">
-        <div id="chart5"></div>
-
-        <h5 class="card-title">Card title</h5>
-        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                    content.</p> -->
-        <!-- <a href="#" class="btn btn-info">Go somewhere</a> -->
-    </div>
-</div>
-<div>
-    <!-- <div class="col-sm"> -->
-    <!-- <div class="card" style="width: 32rem; height: 32rem; display: inline-block;"> -->
-    <!-- <img src="" class="card-img-top" alt="..."> -->
-    <div class="card-body">
-        <div id="chart4"></div>
-
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card</p>
-        <!-- <a href="#" class="btn btn-info">Go somewhere</a> -->
-    </div>
-</div>
-</div>
 <div class="row">
 
     <div class="col-sm">
@@ -157,6 +119,46 @@
     
 </div>
 
+<div class="container">
+    <!-- <div class="row"> -->
+    <div>
+
+        <div class="card-body">
+            <div id="chart0"></div>
+
+            <h5 class="card-title">Card title</h5>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                        content.</p> -->
+            <!-- <a href="#" class="btn btn-info">Go somewhere</a> -->
+        </div>
+    </div>
+</div>
+<div>
+
+    <div class="card-body">
+        <div id="chart5"></div>
+
+        <h5 class="card-title">Card title</h5>
+        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p> -->
+        <!-- <a href="#" class="btn btn-info">Go somewhere</a> -->
+    </div>
+</div>
+<div>
+    <!-- <div class="col-sm"> -->
+    <!-- <div class="card" style="width: 32rem; height: 32rem; display: inline-block;"> -->
+    <!-- <img src="" class="card-img-top" alt="..."> -->
+    <div class="card-body">
+        <div id="chart4"></div>
+
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card</p>
+        <!-- <a href="#" class="btn btn-info">Go somewhere</a> -->
+    </div>
+</div>
+</div>
+
+
 <div>
 
     <div class="card-body">
@@ -187,17 +189,17 @@
     var graphs0 = {{ graph0JSON | safe}};
     Plotly.plot("chart0", graphs0, {});
 
-    var graphs4 = {{ graph4JSON | safe}};
-    Plotly.plot("chart4", graphs4, {});
-
     var graphs1 = {{ graph1JSON | safe}};
-    Plotly.plot("chart1", graphs1, {});
+    Plotly.plot("chart4", graphs1, {});
 
     var graphs2 = {{ graph2JSON | safe}};
-    Plotly.plot("chart2", graphs2, {});
+    Plotly.plot("chart1", graphs2, {});
 
     var graphs3 = {{ graph3JSON | safe}};
-    Plotly.plot("chart3", graphs3, {});
+    Plotly.plot("chart2", graphs3, {});
+
+    var graphs4 = {{ graph4JSON | safe}};
+    Plotly.plot("chart3", graphs4, {});
 
     var graphs5 = {{ graph5JSON | safe}};
     Plotly.plot("chart5", graphs5, {});

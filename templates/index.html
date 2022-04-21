@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet" type="text/css">
@@ -18,6 +18,29 @@
 </head>
 
 <body>
+  <header class="header">
+    <div class="container">
+       <div class="row align-items-center justify-content-between">
+          <div class="logo">
+             <a href="#">Covid-19</a>
+          </div>
+          <button type="button" class="nav-toggler">
+             <span></span>
+          </button>
+          <nav class="nav">
+             <ul>
+                <li><a href="#" class="active">home</a></li>
+                <li><a href="/about">about</a></li>
+                <li><a href="/Analytics">Analytics</a></li>
+                <li><a href="#">contact</a></li>
+             </ul>
+          </nav>
+       </div>
+    </div>
+ </header>
+
+ 
+ 
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
@@ -56,37 +79,9 @@
       </nav>
      -->
      <!-- #d63384 #FCDDED #b8edfa-->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black; position: absolute;
-            left: 50%; transform: translatex(-50%);">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse">
-
-            <a class="navbar-brand" href="#" style="text-align: center;">Covid-19</a></div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <!-- <a class="nav-link text-white" href="#" >Home</a> -->
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Pricing</a>
-                    </li> -->
-                </ul>
-                <!-- <form class="d-flex"> -->
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                    <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
-                <!-- </form> -->
-            </div>
-        </div>
-    </nav>
     <!-- <div class="make-it-hover"><a href="#">Link</a></div> -->
 
+    
     <main>
         <div class="container">
             <div class="row">

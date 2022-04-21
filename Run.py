@@ -10,6 +10,15 @@ import plotly.graph_objects as go
 
 app = Flask(__name__)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/Analytics')
+def Analytics():
+    return render_template('Analytics.html')
+
 @app.route('/')
 def index():
 
@@ -50,7 +59,7 @@ def index():
     fig1.update_xaxes(rangeslider_visible=True)
     # fig.show()
     fig2 = px.bar(data_frame=dff,x='State' ,y=['CNF'],title='Statewise comparison')
-    fig3 = px.line(data_frame=df,x='Date',y=['TC','TR','TD'],title='Cumulative covid cases')
+    fig3 = px.line(data_frame=df,x='Date',y=['TC','TR','TD'],title='Cumulative covid cases',log_y=True)
 
     fig4 = px.line(data_frame=df,x='Date',y=['TC','TR','TD'],title='Cummilative Cases India')
     fig4.update_xaxes(
@@ -68,18 +77,18 @@ def index():
     fig5 = px.line_3d(data_frame=df,x='Date',y='DR',z='DD',title='Daily Cases India',log_y= True)
     fig6 = px.funnel(data_frame=df,x='Date',y='DC',title='Daily cases w.r.t. preceeding as day parameter')
 
-    graph0JSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+    graph0JSON = json.dumps(fig1, cls=plotly.utils.PlotlyJSONEncoder)
 
-    graph1JSON = json.dumps(fig1, cls=plotly.utils.PlotlyJSONEncoder)
+    graph1JSON = json.dumps(fig2, cls=plotly.utils.PlotlyJSONEncoder)
 
     
-    graph2JSON = json.dumps(fig2, cls=plotly.utils.PlotlyJSONEncoder)
+    graph2JSON = json.dumps(fig3, cls=plotly.utils.PlotlyJSONEncoder)
 
    
-    graph3JSON = json.dumps(fig3, cls=plotly.utils.PlotlyJSONEncoder)
+    graph3JSON = json.dumps(fig6, cls=plotly.utils.PlotlyJSONEncoder)
     graph4JSON = json.dumps(fig4, cls=plotly.utils.PlotlyJSONEncoder)
     graph5JSON = json.dumps(fig5, cls=plotly.utils.PlotlyJSONEncoder)
-    graph6JSON = json.dumps(fig6, cls=plotly.utils.PlotlyJSONEncoder)
+    graph6JSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
 
 
 
