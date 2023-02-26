@@ -96,7 +96,7 @@ def index():
     # return render_template('horizontal.html')
 
 
- app.run(debug=true)
+#  app.run(debug=true)
 # if __name__ == "__main__":
 #     app.run(debug=True,port=8000)
 
