@@ -2,4 +2,3 @@ flask
 plotly
 pandas
 numpy
-json
