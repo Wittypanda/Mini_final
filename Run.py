@@ -87,8 +87,8 @@ def index():
    
     graph3JSON = json.dumps(fig6, cls=plotly.utils.PlotlyJSONEncoder)
     graph4JSON = json.dumps(fig4, cls=plotly.utils.PlotlyJSONEncoder)
-    graph5JSON = json.dumps(fig5, cls=plotly.utils.PlotlyJSONEncoder)
-    graph6JSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+#     graph5JSON = json.dumps(fig5, cls=plotly.utils.PlotlyJSONEncoder)
+#     graph6JSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
 
 
 
