@@ -83,36 +83,14 @@ def index():
    
     graph3JSON = json.dumps(fig6, cls=plotly.utils.PlotlyJSONEncoder)
     graph4JSON = json.dumps(fig4, cls=plotly.utils.PlotlyJSONEncoder)
-#     graph5JSON = json.dumps(fig5, cls=plotly.utils.PlotlyJSONEncoder)
-#     graph6JSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+    graph5JSON = json.dumps(fig5, cls=plotly.utils.PlotlyJSONEncoder)
+    graph6JSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
 
 
 
     return render_template('exten.html',title='India',graph0JSON = graph0JSON,graph1JSON = graph1JSON,graph2JSON=graph2JSON,graph3JSON=graph3JSON,graph4JSON = graph4JSON,graph5JSON = graph5JSON,graph6JSON = graph6JSON)
    
 
-#  app.run(debug=true)
-# if __name__ == "__main__":
-#     app.run(debug=True,port=8000)
-
-
-
-
-# fig_4 = px.bar(data_frame=df,x='Date',y='Daily Deaths',template='plotly_dark',title='Daily cases comparison on preceding day parameters')
-    # fig_5 = px.funnel(data_frame=df,x='Date',y='Daily Recovred',template='plotly_dark',title='Daily recovery comparison on preceding day parameters')
-    # fig_6 = px.funnel(data_frame=df,x='Date',y='DD',template='plotly_dark',title='Daily death comparison on preceding day parameters')
+if __name__ == "__main__":
+    app.run(debug=True,port=8000)
     
- 
-    # df = px.data.medals_wide()
-    # fig1 = px.bar(df, x="nation", y=["gold", "silver", "bronze"], title="Wide-Form Input")
-
-# Graph two
-    # df = px.data.iris()
-    # fig2 = px.scatter_
-     # # Graph three
-    # df = px.data.gapminder().query("continent=='Oceania'")
-    # fig3 = px.line(df, x="year", y="lifeExp", color='country',  title="Life Expectancy")
-
- # # Graph three
-    # df = px.data.gapminder().query("continent=='Oceania'")
-    # fig3 = px.line(df, x="year", y="lifeExp", color='country',  title="Life Expectancy")
