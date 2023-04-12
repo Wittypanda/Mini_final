@@ -3,10 +3,6 @@ import pandas as pd
 import json 
 import plotly
 import plotly.express as px
-# import plotly.graph_objects as go 
-
-
-# from application import app
 
 app = Flask(__name__)
 
@@ -54,10 +50,10 @@ def index():
     fig.update_geos(fitbounds="locations", visible=False)
 
 
-    # fig1 = px.line(data_frame=df,x='Date',y=['Daily Deaths','Daily Recovred','DD'], title='Covid cases India')
+    
     fig1 = px.line(data_frame=df,x='Date' ,y=['DC','DR','DD'],title='Daily Cases India')
     fig1.update_xaxes(rangeslider_visible=True)
-    # fig.show()
+    
     fig2 = px.bar(data_frame=dff,x='State' ,y=['CNF','ACT','RCV','DED'],title='Statewise comparison')
     fig3 = px.line(data_frame=df,x='Date',y=['TC','TR','TD'],title='Cumulative covid cases',log_y=True)
 
@@ -93,30 +89,7 @@ def index():
 
 
     return render_template('exten.html',title='India',graph0JSON = graph0JSON,graph1JSON = graph1JSON,graph2JSON=graph2JSON,graph3JSON=graph3JSON,graph4JSON = graph4JSON,graph5JSON = graph5JSON,graph6JSON = graph6JSON)
-    # return render_template('horizontal.html')
-
+   
 
 if __name__ == "__main__":
     app.run(debug=True,port=8000)
-
-
-
-
-# fig_4 = px.bar(data_frame=df,x='Date',y='Daily Deaths',template='plotly_dark',title='Daily cases comparison on preceding day parameters')
-    # fig_5 = px.funnel(data_frame=df,x='Date',y='Daily Recovred',template='plotly_dark',title='Daily recovery comparison on preceding day parameters')
-    # fig_6 = px.funnel(data_frame=df,x='Date',y='DD',template='plotly_dark',title='Daily death comparison on preceding day parameters')
-    
- 
-    # df = px.data.medals_wide()
-    # fig1 = px.bar(df, x="nation", y=["gold", "silver", "bronze"], title="Wide-Form Input")
-
-# Graph two
-    # df = px.data.iris()
-    # fig2 = px.scatter_
-     # # Graph three
-    # df = px.data.gapminder().query("continent=='Oceania'")
-    # fig3 = px.line(df, x="year", y="lifeExp", color='country',  title="Life Expectancy")
-
- # # Graph three
-    # df = px.data.gapminder().query("continent=='Oceania'")
-    # fig3 = px.line(df, x="year", y="lifeExp", color='country',  title="Life Expectancy")
