@@ -6,6 +6,8 @@ import plotly.express as px
 
 app = Flask(__name__)
 
+
+
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -16,6 +18,10 @@ def Analytics():
     return render_template('Analytics.html')
 
 @app.route('/')
+def hello():
+    server_url = os.environ.get('server')
+    return f'The server URL is: {server_url}'
+
 def index():
 
     #graphs
