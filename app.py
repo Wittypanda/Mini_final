@@ -18,9 +18,9 @@ def Analytics():
     return render_template('Analytics.html')
 
 @app.route('/')
-def hello():
-    server_url = os.environ.get('server')
-    return f'The server URL is: {server_url}'
+# def hello():
+#     server_url = os.environ.get('server')
+#     return f'The server URL is: {server_url}'
 
 def index():
 
